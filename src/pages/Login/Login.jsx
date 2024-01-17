@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { supabase } from "./client";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = ({ setToken }) => {
+  let navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -27,12 +28,17 @@ const Login = () => {
         password: formData.password,
       });
       console.log(data);
+
+      setToken(data.session.access_token);
+
+      navigate("/homepage");
+
       if (error) {
         throw error;
       }
       alert("Login Sucessful!");
     } catch (error) {
-      alert(error);
+      alert("Login Not Successful");
     }
   }
 

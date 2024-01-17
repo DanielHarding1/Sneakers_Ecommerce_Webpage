@@ -7,8 +7,22 @@ import Home from "./pages/Home/Home";
 import Footer from "./pages/Footer/Footer";
 import Header from "./pages/Header/Header";
 import Wrapper from "./Wrapper/Wrapper";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [token, setToken] = useState(false);
+
+  if (token) {
+    sessionStorage.setItem("token", JSON.stringify(token));
+  }
+
+  useEffect(() => {
+    if (sessionStorage.getItem("token")) {
+      let data = JSON.parse(sessionStorage.getItem("token"));
+      setToken(data);
+    }
+  });
+
   return (
     <Router>
       <div>
@@ -18,8 +32,8 @@ function App() {
           <Routes>
             <Route path="/" element={<SignUp />} />
             <Route path="/signup" element={<SignUp />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/" element={<SignUp />} />
+            <Route path="/login" element={<Login setToken={setToken} />} />
+            {token ? <Route path={"/homepage"} element={<Home />} /> : ""}
             <Route path="/" element={<SignUp />} />
           </Routes>
         </Wrapper>
