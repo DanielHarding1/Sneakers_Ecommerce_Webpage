@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { supabase } from "./client";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const SignUp = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -22,15 +22,15 @@ const Login = () => {
   async function handleLogin(event) {
     event.preventDefault();
     try {
-      const { data, error } = await supabase.auth.signInWithPassword({
+      const { data, error } = await supabase.auth.signUp({
         email: formData.email,
         password: formData.password,
       });
-      console.log(data);
+
       if (error) {
         throw error;
       }
-      alert("Login Sucessful!");
+      alert("Login Sucessful! Please Verify Via Email");
     } catch (error) {
       alert(error);
     }
@@ -38,7 +38,7 @@ const Login = () => {
 
   return (
     <form id="signup" onSubmit={handleLogin}>
-      <h3>Log In</h3>{" "}
+      <h3>Sign Up</h3>{" "}
       <div className="form-group">
         <label htmlFor="exampleInputEmail1">Email address:</label>
         <input
@@ -65,8 +65,8 @@ const Login = () => {
       </button>
       <br></br>
       <br></br>
-      Dont have an Account? <Link to="/signup">SignUp</Link>
+      Already have an Account? <Link to="/Login">Login</Link>
     </form>
   );
 };
-export default Login;
+export default SignUp;
