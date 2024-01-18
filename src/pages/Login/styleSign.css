@@ -225,3 +225,8 @@ h1 > a {
   border-right: black;
   border-width: 10px;
 }
+
+#signup {
+  height: 1000px;
+  height: 80%;
+}
