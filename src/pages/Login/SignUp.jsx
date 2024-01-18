@@ -31,7 +31,7 @@ const SignUp = () => {
       if (error) {
         throw error;
       }
-      alert("Login Sucessful! Please Verify Via Email");
+      alert("Sign Up Sucessful! Please Verify Via Email");
     } catch (error) {
       alert(error);
     }
@@ -79,7 +79,7 @@ const SignUp = () => {
                 ></input>
               </div>
               <div className="d-flex justify-content-between align-items-center mb-5">
-                <button>Login</button>
+                <button>Sign Up</button>
                 <a href="#!" className="forgot-password-link">
                   Password?
                 </a>
