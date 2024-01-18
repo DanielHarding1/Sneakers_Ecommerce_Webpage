@@ -50,7 +50,7 @@ const Login = ({ setToken }) => {
           <div className="col-sm-6 col-md-7 intro-section">
             <div className="brand-wrapper">
               <h1>
-                <a href="https://stackfindover.com/">Logo</a>
+                <a href="https://stackfindover.com/"> </a>
               </h1>
             </div>
             <div className="intro-content-wrapper">

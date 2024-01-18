@@ -44,7 +44,7 @@ const SignUp = () => {
           <div className="col-sm-6 col-md-7 intro-section">
             <div className="brand-wrapper">
               <h1>
-                <a href="https://stackfindover.com/">Logo</a>
+                <a href="https://stackfindover.com/"></a>
               </h1>
             </div>
             <div className="intro-content-wrapper">
@@ -86,7 +86,7 @@ const SignUp = () => {
               </div>
               <p className="login-wrapper-footer-text">
                 {" "}
-                Don't Have an Account? <Link to="/Login">Login</Link>{" "}
+                Already Have an Account? <Link to="/Login">Login</Link>{" "}
               </p>
             </div>
           </div>
