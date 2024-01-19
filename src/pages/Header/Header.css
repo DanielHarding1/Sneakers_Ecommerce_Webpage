@@ -1,0 +1,19 @@
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav-menu li {
+  padding: 0 2rem;
+}
+
+.nav-menu li a {
+  padding-top: 3px;
+  color: white;
+  font-size: 1rem;
+}
+
+.bg-light {
+  background-color: rgb(1, 1, 46) !important;
+}
