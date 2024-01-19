@@ -28,6 +28,7 @@ function App() {
       <div>
         <Navbar />
         <Header />
+        <Home/>
         <Wrapper>
           <Routes>
             <Route path="/" element={<SignUp />} />

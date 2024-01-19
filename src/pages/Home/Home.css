@@ -1,0 +1,8 @@
+.project-card {
+  height: 40vh;
+  background-color: rgb(51, 49, 49);
+}
+
+.bg-dark {
+  background-color: rgb(1, 1, 46) !important;
+}
