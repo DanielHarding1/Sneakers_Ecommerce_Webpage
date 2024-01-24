@@ -26,9 +26,8 @@ function App() {
   return (
     <Router>
       <div>
-        <Navbar />
-        <Header />
-        <Home/>
+        {token ? <Navbar /> : null}
+        {token ? <Header /> : null}
         <Wrapper>
           <Routes>
             <Route path="/" element={<SignUp />} />
@@ -38,7 +37,7 @@ function App() {
             <Route path="/" element={<SignUp />} />
           </Routes>
         </Wrapper>
-        <Footer />
+        {token ? <Footer /> : null}
       </div>
     </Router>
   );
