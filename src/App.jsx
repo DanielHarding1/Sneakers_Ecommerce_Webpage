@@ -31,10 +31,9 @@ function App() {
         <Wrapper>
           <Routes>
             <Route path="/" element={<SignUp />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/login" element={<Login setToken={setToken} />} />
+            <Route path="/Login" element={<Login setToken={setToken} />} />
+
             {token ? <Route path={"/homepage"} element={<Home />} /> : ""}
-            <Route path="/" element={<SignUp />} />
           </Routes>
         </Wrapper>
         {token ? <Footer /> : null}

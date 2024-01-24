@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./Home.css";
+import Header from "../Header/Header";
+import axios from "axios";
 
 const Home = () => {
   return (
     <div className="mt-5 ml-2">
-      
-      <Row >
+      <Row>
         {/* First Row */}
         <Col xs={12} md={4}>
           <Card className="project-card">
