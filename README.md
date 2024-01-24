@@ -1,9 +1,31 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 # Sneakers_Ecommerce_Webpage
+
+
+## Overview
+
+One stop sneakers store.
+
+## Website visuals
+
+The following image shows the web application's appearance and functionality:
+
+![Login page](./demo/login.png)
+![Sign up page](./demo/signup.png)
+![Homepage instances](./demo/homepage.png)
+
+## Technologies
+
+- Vite
+- React
+- Javascript
+- Bootstrap
+- HTML
+- CSS
+
+## Website
+
+Todo [deployed link here]
+
+## Contributions
+
+Made by Ahmad Saqib & Daniel Harding
