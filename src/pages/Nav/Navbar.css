@@ -6,3 +6,9 @@
 .width {
   width: auto;
 }
+
+.logo,
+.img-slider {
+  height: 250px; /* Set the desired height */
+  object-fit: contain; /* Maintain aspect ratio while fitting within the specified height */
+}
