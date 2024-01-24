@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="row">
           <div className="col-md-3">
           <a className="nav-link d-flex align-items-center" href="#">
-              <img src={LogoImg} alt="Logo" className="img-fluid" />
+              <img src={LogoImg} alt="Logo" className="img-flui" />
             </a>
           </div>
           <div className="col-md-3 d-flex align-items-center">
@@ -25,13 +25,13 @@ const Navbar = () => {
           <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <img src={Img1} className=" d-block w-100" alt="First slide" />
+                  <img src={Img1} className=" d-block w-100 img-slider" alt="First slide" />
                 </div>
                 <div className="carousel-item">
-                  <img src={Img2} className="d-block w-100" alt="Second slide" />
+                  <img src={Img2} className="d-block w-100 img-slider" alt="Second slide" />
                 </div>
                 <div className="carousel-item">
-                  <img src={Img3} className="d-block w-100" alt="Third slide" />
+                  <img src={Img3} className="d-block w-100 img-slider" alt="Third slide" />
                 </div>
               </div>
             </div>

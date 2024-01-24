@@ -1,77 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col, Card } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
-import "./Home.css";
-import Header from "../Header/Header";
-import axios from "axios";
 
-const Home = () => {
+import "./Home.css";
+
+const Home = ({sneakersData = []}) => {
   return (
     <div className="mt-5 ml-2">
-      <Row>
-        {/* First Row */}
-        <Col xs={12} md={4}>
-          <Card className="project-card">
-            <Card.Img variant="top" src="/path/to/image1.jpg" alt="img" />
-            <Card.Body>
-              <Card.Title></Card.Title>
-              <NavLink to="/project1"></NavLink>
-            </Card.Body>
-          </Card>
-        </Col>
-
-        <Col xs={12} md={4}>
-          <Card className="project-card">
-            <Card.Img variant="top" src="/path/to/image2.jpg" alt="img" />
-            <Card.Body>
-              <Card.Title></Card.Title>
-              <NavLink to="/project2"></NavLink>
-            </Card.Body>
-          </Card>
-        </Col>
-
-        <Col xs={12} md={4}>
-          <Card className="project-card">
-            <Card.Img variant="top" src="/path/to/image3.jpg" alt="img" />
-            <Card.Body>
-              <Card.Title></Card.Title>
-              <NavLink to="/project3"></NavLink>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-
-      <Row className="mt-3">
-        {/* Second Row */}
-        <Col xs={12} md={4}>
-          <Card className="project-card">
-            <Card.Img variant="top" src="/path/to/image4.jpg" alt="img" />
-            <Card.Body>
-              <Card.Title></Card.Title>
-              <NavLink to="/project4"></NavLink>
-            </Card.Body>
-          </Card>
-        </Col>
-
-        <Col xs={12} md={4}>
-          <Card className="project-card">
-            <Card.Img variant="top" src="/path/to/image5.jpg" alt="img" />
-            <Card.Body>
-              <Card.Title></Card.Title>
-              <NavLink to="/project5"></NavLink>
-            </Card.Body>
-          </Card>
-        </Col>
-
-        <Col xs={12} md={4}>
-          <Card className="project-card">
-            <Card.Img variant="top" src="/path/to/image6.jpg" alt="img" />
-            <Card.Body>
-              <Card.Title></Card.Title>
-              <NavLink to="/project6"></NavLink>
-            </Card.Body>
-          </Card>
-        </Col>
+      <Row className="row-cols-1 row-cols-md-3 g-4">
+        {sneakersData?.map((sneaker, index) => (
+          <Col key={sneaker.id}>
+            <Card className="h-100">
+              <Card.Img variant="top" src={`https://${sneaker.imageUrl}`} alt="img" />
+              <Card.Body>
+                <Card.Title>{sneaker.name}</Card.Title>
+                <Card.Text>
+                  <strong>Brand:</strong> {sneaker.brandName}
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer>
+                  <strong>Price:</strong> {sneaker.price.current.text}
+              </Card.Footer>
+            </Card>
+          </Col>
+        ))}
       </Row>
     </div>
   );
