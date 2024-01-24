@@ -7,6 +7,7 @@ import Home from "./pages/Home/Home";
 import Footer from "./pages/Footer/Footer";
 import Header from "./pages/Header/Header";
 import Wrapper from "./Wrapper/Wrapper";
+import Main from "./pages/Main"
 import { useEffect, useState } from "react";
 
 function App() {
@@ -27,14 +28,12 @@ function App() {
     <Router>
       <div>
         {token ? <Navbar /> : null}
-        {token ? <Header /> : null}
         <Wrapper>
           <Routes>
-            <Route path="/" element={<SignUp />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/login" element={<Login setToken={setToken} />} />
-            {token ? <Route path={"/homepage"} element={<Home />} /> : ""}
-            <Route path="/" element={<SignUp />} />
+            {!token ? <Route path="/" element={<Main />} /> : null}
+            {!token ? <Route path="/signup" element={<SignUp />} /> : null}
+            {!token ? <Route path="/login" element={<Login setToken={setToken} />} /> : null}
+            {token ? <Route path={"/homepage"} element={<Main />} /> : ""}
           </Routes>
         </Wrapper>
         {token ? <Footer /> : null}

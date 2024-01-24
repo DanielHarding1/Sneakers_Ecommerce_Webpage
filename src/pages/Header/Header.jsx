@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom"
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "./Header.css"
@@ -35,25 +33,15 @@ const Header = () => {
                 placeholder="Search"
                 aria-label="Search"
               />
-             
+
             </form>
         </div>
-       
+
       </div>
-      
+
     </div>
   </nav>
   );
 };
 
 export default Header;
-
-
-
-
-
-
-
-
-
-
