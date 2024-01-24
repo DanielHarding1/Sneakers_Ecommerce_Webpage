@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Row, Col, Card } from "react-bootstrap";
+import CardPlaceholder from "./CardPlaceholder";
 
 import "./Home.css";
 
-const Home = ({sneakersData = []}) => {
+const Home = ({sneakersData = [], isLoading}) => {
   return (
     <div className="mt-5 ml-2">
       <Row className="row-cols-1 row-cols-md-3 g-4">
-        {sneakersData?.map((sneaker, index) => (
+      {isLoading && <CardPlaceholder />}
+        {sneakersData.map((sneaker) => (
           <Col key={sneaker.id}>
             <Card className="h-100">
               <Card.Img variant="top" src={`https://${sneaker.imageUrl}`} alt="img" />
