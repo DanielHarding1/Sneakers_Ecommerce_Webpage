@@ -27,4 +27,4 @@ Todo [deployed link here]
 
 ## Contributions
 
-Made by Ahmad Saqib & Daniel Harding & Radu Oras
+Made by [Ahmad Saqib](https://portfolio-ahmad-saqib.netlify.app/) & Daniel Harding & Radu Oras
