@@ -20,16 +20,16 @@ const Header = ({performSearch}) => {
           <div className="col-md-8">
             <ul className="nav-menu">
               <li>
-                <Link to="/">Brand Developers</Link>
+                About Us
               </li>
               <li>
-                <Link to="/">Shoe Size</Link>
+                Special Deals
               </li>
               <li>
-                <Link to="/">Colour</Link>
+                Hot Selling
               </li>
               <li>
-                <Link to="/">Price Range</Link>
+                Limited Editions
               </li>
             </ul>
           </div>
