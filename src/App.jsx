@@ -30,7 +30,7 @@ function App() {
         {token ? <Navbar /> : null}
         <Wrapper>
           <Routes>
-            {!token ? <Route path="/" element={<Main />} /> : null}
+            {!token ? <Route path="/" element={<SignUp />} /> : null}
             {!token ? <Route path="/signup" element={<SignUp />} /> : null}
             {!token ? <Route path="/login" element={<Login setToken={setToken} />} /> : null}
             {token ? <Route path={"/homepage"} element={<Main />} /> : ""}
