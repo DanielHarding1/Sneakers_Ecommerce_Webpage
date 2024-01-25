@@ -14,7 +14,6 @@ The following image shows the web application's appearance and functionality:
 ![Homepage instances](./demo/homepage.png)
 
 ## Technologies
-
 - Vite
 - React
 - Javascript
@@ -28,4 +27,4 @@ Todo [deployed link here]
 
 ## Contributions
 
-Made by Ahmad Saqib & Daniel Harding
+Made by Ahmad Saqib & Daniel Harding & Radu Oras
